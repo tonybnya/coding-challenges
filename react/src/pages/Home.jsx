@@ -14,9 +14,20 @@ const Home = () => {
       setError("");
 
       try {
-        const response = await fetch(`${API_URL}/challenges/`);
-        const data = await response.json();
+        const response = await fetch(`${API_URL}/challenges/`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          credentials: "include",
+        });
 
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
         if (!data || data.length === 0) {
           throw new Error("No challenges found");
         }
@@ -24,7 +35,7 @@ const Home = () => {
         setChallenges(data);
       } catch (error) {
         console.error("Error:", error);
-        setError("Failed to fetch challenges. Please try again later.");
+        setError(`Failed to fetch challenges: ${error.message}`);
         setChallenges([]);
       } finally {
         setIsLoading(false);
