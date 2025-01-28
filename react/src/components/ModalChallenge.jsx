@@ -15,7 +15,7 @@ const ModalChallenge = ({ challenge }) => {
   };
 
   return (
-    <button
+    <div
       onClick={() => setIsOpen(true)}
       className="cursor-pointer bg-[#030713] w-full p-2 rounded-md border border-[#2C2C2C] text-center hover:bg-[#1C202A]"
     >
@@ -139,7 +139,7 @@ const ModalChallenge = ({ challenge }) => {
           </div>
         </div>
       )}
-    </button>
+    </div>
   );
 };
 

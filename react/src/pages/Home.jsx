@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import ModalChallenge from "../components/ModalChallenge";
+import Spinner from "../components/Spinner";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+
+console.log("API_URL:", API_URL);
 
 const Home = () => {
   const [challenges, setChallenges] = useState([]);
@@ -20,7 +23,7 @@ const Home = () => {
             "Content-Type": "application/json",
           },
           mode: "cors", // Add this
-          credentials: "omit", // Change from 'include' to 'omit'
+          // credentials: "omit", // Change from 'include' to 'omit'
         });
 
         if (!response.ok) {
@@ -47,14 +50,20 @@ const Home = () => {
 
   if (isLoading) return <div className="text-center mt-10">Loading...</div>;
   if (error)
-    return <div className="text-center text-red-500 mt-10">{error}</div>;
+    return <div className="text-center text-red-900 mt-10">{error}</div>;
 
   return (
     <div className="bg-[#030713] text-white min-h-screen px-4 sm:px-6 lg:px-20 mt-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-2 place-items-center bg-[#1C202A] rounded-md">
-        {challenges.map((challenge) => (
-          <ModalChallenge key={challenge.id} challenge={challenge} />
-        ))}
+        {isLoading ? (
+          <Spinner className="text-center" />
+        ) : error ? (
+          <p className="text-red-950">{error}</p>
+        ) : (
+          challenges.map((challenge) => (
+            <ModalChallenge key={challenge.id} challenge={challenge} />
+          ))
+        )}
       </div>
     </div>
   );
