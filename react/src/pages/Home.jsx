@@ -18,9 +18,9 @@ const Home = () => {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json",
           },
-          credentials: "include",
+          mode: "cors", // Add this
+          credentials: "omit", // Change from 'include' to 'omit'
         });
 
         if (!response.ok) {
