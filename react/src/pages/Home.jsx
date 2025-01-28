@@ -48,9 +48,9 @@ const Home = () => {
     fetchChallenges();
   }, []);
 
-  if (isLoading) return <div className="text-center mt-10">Loading...</div>;
-  if (error)
-    return <div className="text-center text-red-900 mt-10">{error}</div>;
+  // if (isLoading) return <div className="text-center mt-10">Loading...</div>;
+  // if (error)
+  //   return <div className="text-center text-red-900 mt-10">{error}</div>;
 
   return (
     <div className="bg-[#030713] text-white min-h-screen px-4 sm:px-6 lg:px-20 mt-10">
