@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://coding-challenges-3mus.onrender.com/",
+    "https://tonybnya-coding-challenges.onrender.com/",
 ]
 
 REST_FRAMEWORK = {
