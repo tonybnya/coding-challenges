@@ -11,6 +11,8 @@ dist-ssr/
 # Environment variables
 .env
 
+challenges.js
+
 # Logs
 logs/
 *.log
