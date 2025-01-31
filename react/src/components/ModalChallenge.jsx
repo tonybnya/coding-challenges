@@ -131,7 +131,7 @@ const ModalChallenge = ({ challenge }) => {
             <div className="px-4 py-2 flex justify-end">
               <button
                 onClick={() => setIsOpen(false)}
-                className="font-bold rounded-md text-white bg-black hover:bg-[#030713] px-6 py-3 mx-auto cursor-pointer"
+                className="font-bold rounded-md text-center text-white bg-black hover:bg-white hover:text-black px-4 py-3 mx-auto cursor-pointer"
               >
                 OK
               </button>

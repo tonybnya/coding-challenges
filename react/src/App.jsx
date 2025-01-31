@@ -15,8 +15,8 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="task-list" element={<TaskList />} />
-          <Route path="*" element={<NoPage />} />
         </Route>
+        <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -52,9 +52,9 @@ const Home = () => {
     <div className="bg-[#030713] text-white min-h-screen px-4 sm:px-6 lg:px-20 mt-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 p-2 place-items-center bg-[#1C202A] rounded-md">
         {isLoading ? (
-          <Spinner className="text-center" />
+          <Spinner className="text-center mx-auto" />
         ) : error ? (
-          <p className="text-red-900">{error}</p>
+          <p className="text-red-900 text-center mx-auto">{error}</p>
         ) : (
           challenges.map((challenge) => (
             <ModalChallenge key={challenge.id} challenge={challenge} />
