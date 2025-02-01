@@ -39,7 +39,7 @@ const NoPage = () => {
 
           <button
             size="lg"
-            className="px-6 py-2 rounded-md bg-white text-black hover:bg-white/90"
+            className="px-6 py-2 rounded-md bg-white text-black hover:text-white hover:bg-[#602f32]"
           >
             <a
               href="/"
