@@ -1,0 +1,13 @@
+racecar,True
+Racecar,True
+A man, a plan, a canal: Panama,True
+No 'x' in Nixon,True
+12321,True
+Was it a car or a cat I saw?,True
+Hello,False
+Python,False
+,True
+a,True
+abcba,True
+abccba,True
+abcd,False
