@@ -6,7 +6,7 @@ This project is designed to implement and test multiple algorithms. Each functio
 
 ```
 .
-├── palindrome.py           # Palindrome checker function
+├── algo_001_palindrome.py  # Palindrome checker function
 ├── other_algorithm.py      # Additional algorithm files
 │── tests/                  # Directory for all test cases
 │   ├── __init__.py         # Makes 'tests' a package (optional)
@@ -20,26 +20,25 @@ This project is designed to implement and test multiple algorithms. Each functio
 ## Installation
 
 1. Clone the repository:
-    
-    ```sh
-    git clone https://github.com/tonybnya/coding-challenges.git
-    cd coding-challenges/dsa
-    ```
-    
+
+   ```sh
+   git clone https://github.com/tonybnya/coding-challenges.git
+   cd coding-challenges/dsa
+   ```
+
 2. (Optional) Create a virtual environment and activate it:
-    
-    ```sh
-    python -m venv venv
-    source venv/bin/activate  # On macOS/Linux
-    venv\Scripts\activate     # On Windows
-    ```
-    
+
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   venv\Scripts\activate     # On Windows
+   ```
+
 3. Install dependencies:
-    
-    ```sh
-    pip install -r requirements.txt
-    ```
-    
+
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
@@ -80,3 +79,4 @@ pytest tests/
 ## License
 
 This project is licensed under the MIT License.
+
