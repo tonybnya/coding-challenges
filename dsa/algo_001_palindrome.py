@@ -5,6 +5,8 @@ A palindrome is a string that reads the same forwards and backwards
 """
 
 
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 def is_palindrome(s: str) -> bool:
     """
     Check if a string is a palindrome, ignoring non-alphabetic characters and case.
