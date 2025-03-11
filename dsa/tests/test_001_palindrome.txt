@@ -1,13 +1,24 @@
 racecar,True
 Racecar,True
+byteetyb,True
 A man, a plan, a canal: Panama,True
 No 'x' in Nixon,True
 12321,True
 Was it a car or a cat I saw?,True
+abba,True
 Hello,False
 Python,False
+a+2c!2a,True
 ,True
 a,True
+11,True
+aa,True
 abcba,True
 abccba,True
 abcd,False
+a dog! a panic in a pagoda.,True
+abc123,False
+!, (?),True
+12.02.2021,True
+21.02.2021,False
+hello, world!,False
