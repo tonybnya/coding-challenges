@@ -5,27 +5,22 @@ A palindrome is a string that reads the same forwards and backwards
 """
 
 
-# Time Complexity: O(n)
-# Space Complexity: O(1)
 def is_palindrome(s: str) -> bool:
     """
-    Check if a string is a palindrome, ignoring non-alphabetic characters and case.
-
-    Args:
-        s: The input string to check.
-
-    Returns:
-        True if the string is a palindrome, False otherwise.
+    Optimal solution
+    Time Complexity: O(n)
+    Space Complexity: O(1)
     """
-    # Your code here
     i: int = 0
     j: int = len(s) - 1
 
     while i < j:
-        if not s[i].isalpha():
+        # if not s[i].isalpha():
+        if not s[i].isalnum():
             i += 1
             continue
-        if not s[j].isalpha():
+        # if not s[j].isalpha():
+        if not s[j].isalnum():
             j -= 1
             continue
         if s[i].lower() != s[j].lower():
