@@ -15,11 +15,9 @@ def is_palindrome(s: str) -> bool:
     j: int = len(s) - 1
 
     while i < j:
-        # if not s[i].isalpha():
         if not s[i].isalnum():
             i += 1
             continue
-        # if not s[j].isalpha():
         if not s[j].isalnum():
             j -= 1
             continue
