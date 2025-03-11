@@ -6,10 +6,12 @@ If no pair is fund, return an empty array.
 """
 
 
-# Naive Solution
-# Time Complexity: O(n^2)
-# Space Complexity: O(1)
 def pair_sum_1(nums: list[int], target: int) -> list[int]:
+    """
+    Naive Solution
+    Time Complexity: O(n^2)
+    Space Complexity: O(1)
+    """
     n: int = len(nums)
 
     for i in range(n):
@@ -20,10 +22,12 @@ def pair_sum_1(nums: list[int], target: int) -> list[int]:
     return []
 
 
-# Optimal Solution
-# Time Complexity: O()
-# Space Complexity: O()
 def pair_sum_2(nums: list[int], target: int) -> list[int]:
+    """
+    Optimal Solution
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+    """
     n: int = len(nums)
     l, r = 0, n - 1
 
