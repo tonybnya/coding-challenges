@@ -34,11 +34,11 @@ def pair_sum_2(nums: list[int], target: int) -> list[int]:
     while l < r:
         s: int = nums[l] + nums[r]
 
-        if s > target:
-            r -= 1
-        if s < target:
-            l += 1
-        else:
+        if s == target:
             return [l, r]
+        elif s > target:
+            r -= 1
+        else:
+            l += 1
 
     return []
