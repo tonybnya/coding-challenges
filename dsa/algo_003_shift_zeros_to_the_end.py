@@ -21,3 +21,24 @@ def shift_zeros_to_the_end_1(nums: list[int]) -> list[int]:
             j += 1
 
     return temp
+
+
+def shift_zeros_to_the_end_2(nums: list[int]) -> None:
+    """
+    Optimal Solution
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    """
+    n: int = len(nums)
+    i, j = 0, 0
+
+    for i in range(n):
+        if nums[i] != 0:
+            nums[j], nums[i] = nums[i], nums[j]
+            j += 1
+
+    while j < n:
+        nums[j] = 0
+        j += 1
+
+    return nums

@@ -4,7 +4,10 @@ Test file for Shift Zeros to the End algorithm.
 
 import pytest
 
-from algo_003_shift_zeros_to_the_end import shift_zeros_to_the_end_1
+from algo_003_shift_zeros_to_the_end import (
+    shift_zeros_to_the_end_1,
+    shift_zeros_to_the_end_2,
+)
 
 
 def load_test_cases(f):
@@ -35,3 +38,13 @@ def test_003_shift_zeros_to_the_end_1(nums, expected):
     Test for Naive Solution.
     """
     assert shift_zeros_to_the_end_1(nums) == expected
+
+
+@pytest.mark.parametrize(
+    "nums, expected", load_test_cases("tests/test_003_shift_zeros_to_the_end.txt")
+)
+def test_003_shift_zeros_to_the_end_2(nums, expected):
+    """
+    Test for Naive Solution.
+    """
+    assert shift_zeros_to_the_end_2(nums) == expected
