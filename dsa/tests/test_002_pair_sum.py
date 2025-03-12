@@ -1,8 +1,10 @@
 """
 Test file for Pair Sum algorithm.
+1,1,1->2=0,2 (temporary test: [0, 1] for naive, [0, 2] for optimal)
 """
 
 import pytest
+
 from algo_002_pair_sum import pair_sum_1, pair_sum_2
 
 
@@ -49,10 +51,3 @@ def test_pair_sum_2(nums, target, expected):
     Test for Optimal Solution.
     """
     assert pair_sum_2(nums, target) == expected
-
-
-if __name__ == "__main__":
-    FILENAME = "./test_002_pair_sum.txt"
-    test_cases = load_test_cases(FILENAME)
-    for test in test_cases:
-        print(f"nums = {test[0]}, target = {test[1]}\nExpected: {test[2]}\n")
