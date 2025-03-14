@@ -5,10 +5,10 @@ Test file for Pair Sum algorithm.
 
 import pytest
 
-from algo_002_pair_sum import pair_sum_1, pair_sum_2
+from dsa_002_pair_sum import pair_sum_1, pair_sum_2
 
 
-def load_test_cases(f):
+def load_test_cases(f: str) -> list[tuple[list[int], int, list[int]]]:
     """
     Function to load test cases from a text file.
     """
@@ -36,7 +36,7 @@ def load_test_cases(f):
 @pytest.mark.parametrize(
     "nums, target, expected", load_test_cases("tests/test_002_pair_sum.txt")
 )
-def test_pair_sum_1(nums, target, expected):
+def test_pair_sum_1(nums: list[int], target: int, expected: list[int]) -> None:
     """
     Test for Naive Solution.
     """
@@ -46,7 +46,7 @@ def test_pair_sum_1(nums, target, expected):
 @pytest.mark.parametrize(
     "nums, target, expected", load_test_cases("tests/test_002_pair_sum.txt")
 )
-def test_pair_sum_2(nums, target, expected):
+def test_pair_sum_2(nums: list[int], target: int, expected: list[int]) -> None:
     """
     Test for Optimal Solution.
     """

@@ -4,13 +4,13 @@ Test file for Shift Zeros to the End algorithm.
 
 import pytest
 
-from algo_003_shift_zeros_to_the_end import (
+from dsa_003_shift_zeros_to_the_end import (
     shift_zeros_to_the_end_1,
     shift_zeros_to_the_end_2,
 )
 
 
-def load_test_cases(f):
+def load_test_cases(f: str) -> list[tuple[list[int], list[int]]]:
     """
     Function to load test cases from a text file.
     """
@@ -33,7 +33,7 @@ def load_test_cases(f):
 @pytest.mark.parametrize(
     "nums, expected", load_test_cases("tests/test_003_shift_zeros_to_the_end.txt")
 )
-def test_003_shift_zeros_to_the_end_1(nums, expected):
+def test_003_shift_zeros_to_the_end_1(nums, expected) -> None:
     """
     Test for Naive Solution.
     """
@@ -43,7 +43,7 @@ def test_003_shift_zeros_to_the_end_1(nums, expected):
 @pytest.mark.parametrize(
     "nums, expected", load_test_cases("tests/test_003_shift_zeros_to_the_end.txt")
 )
-def test_003_shift_zeros_to_the_end_2(nums, expected):
+def test_003_shift_zeros_to_the_end_2(nums, expected) -> None:
     """
     Test for Naive Solution.
     """

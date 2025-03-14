@@ -4,10 +4,10 @@ Test file for Palindrome algorithm.
 
 import pytest
 
-from algo_001_palindrome import is_palindrome
+from dsa_001_palindrome import is_palindrome
 
 
-def load_test_cases(filename):
+def load_test_cases(filename: str) -> list[tuple[str, bool]]:
     """
     Function to load test cases from a text file.
     """
@@ -27,7 +27,7 @@ def load_test_cases(filename):
 @pytest.mark.parametrize(
     "test_input, expected", load_test_cases("tests/test_001_palindrome.txt")
 )
-def test_is_palindrome(test_input, expected):
+def test_is_palindrome(test_input: str, expected: bool) -> None:
     """
     Test for Optimal Solution.
     """
