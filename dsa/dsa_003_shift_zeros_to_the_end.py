@@ -6,7 +6,7 @@ to the end while maintaining the relative order of non-zero elements.
 
 def shift_zeros_to_the_end_1(nums: list[int]) -> list[int]:
     """
-    Naive Solution
+    Naive Solution: Temporary list
     Time Complexity: O(n)
     Space Complexity: O(n)
     """

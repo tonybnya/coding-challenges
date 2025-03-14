@@ -8,7 +8,7 @@ If no pair is fund, return an empty array.
 
 def pair_sum_1(nums: list[int], target: int) -> list[int]:
     """
-    Naive Solution
+    Naive Solution: Two loops
     Time Complexity: O(n^2)
     Space Complexity: O(1)
     """
@@ -24,7 +24,7 @@ def pair_sum_1(nums: list[int], target: int) -> list[int]:
 
 def pair_sum_2(nums: list[int], target: int) -> list[int]:
     """
-    Optimal Solution
+    Optimal Solution: Two pointers - Inward traversal
     Time Complexity: O(n)
     Space Complexity: O(1)
     """

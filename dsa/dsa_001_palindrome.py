@@ -7,7 +7,7 @@ A palindrome is a string that reads the same forwards and backwards
 
 def is_palindrome(s: str) -> bool:
     """
-    Optimal solution
+    Optimal solution: Two pointers - Inward traversal
     Time Complexity: O(n)
     Space Complexity: O(1)
     """
