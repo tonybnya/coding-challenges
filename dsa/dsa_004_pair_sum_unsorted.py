@@ -44,3 +44,20 @@ def pair_sum_unsorted_2(nums: list[int], target: int) -> list[int]:
             l += 1
 
     return []
+
+
+def pair_sum_unsorted_3(nums: list[int], target: int) -> list[int]:
+    """
+    Optimal solution
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    """
+    hmap: dict[int, int] = {}
+
+    for i, num in enumerate(nums):
+        diff: int = target - num
+        if diff in hmap:
+            return [hmap[diff], i]
+        hmap[num] = i
+
+    return []

@@ -4,7 +4,11 @@ Test file for Pair Sum Unsorted algorithm.
 
 import pytest
 
-from dsa_004_pair_sum_unsorted import pair_sum_unsorted_1, pair_sum_unsorted_2
+from dsa_004_pair_sum_unsorted import (
+    pair_sum_unsorted_1,
+    pair_sum_unsorted_2,
+    pair_sum_unsorted_3,
+)
 
 
 def load_test_cases(f: str) -> list[tuple[list[int], int, list[int]]]:
@@ -50,3 +54,13 @@ def test_pair_sum_unsorted_1(nums: list[int], target: int, expected: list[int]) 
 #     Test for Optimal Solution.
 #     """
 #     assert pair_sum_unsorted_2(nums, target) == expected
+
+
+@pytest.mark.parametrize(
+    "nums, target, expected", load_test_cases("tests/test_004_pair_sum_unsorted.txt")
+)
+def test_pair_sum_unsorted_3(nums: list[int], target: int, expected: list[int]) -> None:
+    """
+    Test for Optimal Solution.
+    """
+    assert pair_sum_unsorted_3(nums, target) == expected
