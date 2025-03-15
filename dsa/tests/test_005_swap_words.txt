@@ -1,0 +1,10 @@
+The Daily Byte=>Byte Daily The  
+Hello World=>World Hello  
+Python is fun=>fun is Python  
+a b c d e=>e d c b a  
+Reverse these words=>words these Reverse  
+OpenAI GPT model=>model GPT OpenAI  
+Keep learning everyday=>everyday learning Keep  
+Coding is awesome=>awesome is Coding  
+Test case example=>example case Test  
+SingleWord=>SingleWord  
