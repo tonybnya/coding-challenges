@@ -12,7 +12,7 @@ s = "The Daily Byte", return "Byte Daily The".
 
 def swap_words_1(s: str) -> str:
     """
-    First Solution
+    First Solution: Use built-in split() method + temporary list
     Time Complexity: O(n)
     Space Complexity: O(n)
     """
@@ -29,3 +29,24 @@ def swap_words_1(s: str) -> str:
     #     j += 1
 
     return " ".join(temp)
+
+
+def swap_words_2(s: str) -> str:
+    """
+    Second Solution: Two Pointers - Unidirectional Traversal (backwards)
+    Time Complexity: O()
+    Space Complexity: O()
+    """
+    n: int = len(s)
+    words: list[str] = []
+
+    i = j = n - 1
+
+    while j >= 0:
+        while j >= 0 and s[j] != " ":
+            j -= 1
+        words.append(s[j + 1 : i + 1])
+        j -= 1
+        i = j
+
+    return " ".join(words)
