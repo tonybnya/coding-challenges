@@ -34,15 +34,15 @@ def swap_words_1(s: str) -> str:
 def swap_words_2(s: str) -> str:
     """
     Second Solution: Two Pointers - Unidirectional Traversal (backwards)
-    Time Complexity: O()
-    Space Complexity: O()
+    Time Complexity: O(n)
+    Space Complexity: O(n)
     """
     n: int = len(s)
-    words: list[str] = []
+    words: list[str] = []  # SC: O(n)
 
     i = j = n - 1
 
-    while j >= 0:
+    while j >= 0:  # TC: O(n)
         while j >= 0 and s[j] != " ":
             j -= 1
         words.append(s[j + 1 : i + 1])
