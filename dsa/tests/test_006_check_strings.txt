@@ -1,0 +1,7 @@
+abc-d,ab-cd=>true  
+a-b-c,a-b-d=>False  
+hello-world,hello-world=>true  
+python-rules,python-rulez=>False  
+code-test,code-test=>true  
+fast-api,fastapi=>true  
+data-structures,data-structure-s=>true  
