@@ -3,7 +3,6 @@ Test file for Pair Sum Unsorted algorithm.
 """
 
 import pytest
-
 from dsa_004_pair_sum_unsorted import (
     pair_sum_unsorted_1,
     pair_sum_unsorted_2,
