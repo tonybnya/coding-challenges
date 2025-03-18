@@ -40,3 +40,4 @@ local_settings.py
 *.njsproj
 *.sln
 *.sw?
+._*
