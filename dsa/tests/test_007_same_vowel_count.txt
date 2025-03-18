@@ -1,0 +1,9 @@
+laptop=>true
+computer=>false
+racecarx=>false
+banana=>false
+aeiouAEIOU=>true
+abcdefgABCDEFG=>true
+python=>true
+hello guys=>true
+bookkeeper=>false
