@@ -4,7 +4,7 @@ Test file for Same Vowel Count algorithm.
 
 import pytest
 
-from dsa_007_same_vowel_count import same_vowel_count_1
+from dsa_007_same_vowel_count import same_vowel_count_1, same_vowel_count_2
 
 
 def load_test_cases(filename: str) -> list[tuple[str, bool]]:
@@ -33,3 +33,13 @@ def test_same_vowel_count_1(test_input: str, expected: bool) -> None:
     Test for First Solution
     """
     assert same_vowel_count_1(test_input) == expected
+
+
+@pytest.mark.parametrize(
+    "test_input, expected", load_test_cases("tests/test_007_same_vowel_count.txt")
+)
+def test_same_vowel_count_2(test_input: str, expected: bool) -> None:
+    """
+    Test for Second Solution
+    """
+    assert same_vowel_count_2(test_input) == expected

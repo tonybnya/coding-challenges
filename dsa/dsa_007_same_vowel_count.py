@@ -35,3 +35,27 @@ def same_vowel_count_1(s: str) -> bool:
             rhv += 1
 
     return lhv == rhv
+
+
+def same_vowel_count_2(s: str) -> bool:
+    """
+    Second Solution: Two Pointers (one loop)
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+    """
+    vowels = ("a", "e", "i", "o", "u", "y")  # SC: O(6) -> 6 is a constant, so O(1)
+    n: int = len(s)
+
+    lhv, rhv = 0, 0
+
+    l, r = 0, n - 1
+
+    while l <= r:
+        if s[l].lower() in vowels:
+            lhv += 1
+        if s[r].lower() in vowels:
+            rhv += 1
+        l += 1
+        r -= 1
+
+    return lhv == rhv
