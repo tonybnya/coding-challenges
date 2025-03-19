@@ -13,17 +13,14 @@ jewels = "AYOPD", stones = "ayopd", return 0
 """
 
 
-def jewels_and_stones(jewels: str, stones: str) -> int:
+def jewels_and_stones_1(jewels: str, stones: str) -> int:
     """
-    Solution
+    First Solution: Two Hashmaps
     Time Complexity: O(m + n)
     Space Complexity: O(m + n)
     """
     hmap_j: dict = {}  # SC: O(m)
     hmap_s: dict = {}  # SC: O(n)
-
-    # m: int = len(hmap_j)
-    # n: int = len(hmap_s)
 
     for c in jewels:  # TC: O(m)
         hmap_j[c] = hmap_j.get(c, 0) + 1
@@ -36,5 +33,25 @@ def jewels_and_stones(jewels: str, stones: str) -> int:
     for c in hmap_s.keys():  # TC: O(n)
         if c in hmap_j:
             count += hmap_s[c]
+
+    return count
+
+
+def jewels_and_stones_2(jewels: str, stones: str) -> int:
+    """
+    First Solution: One Hashmap
+    Time Complexity: O(m + n)
+    Space Complexity: O()
+    """
+    hmap: dict = {}  # SC: O(m)
+
+    for c in stones:
+        hmap[c] = hmap.get(c, 0) + 1
+
+    count: int = 0
+
+    for c in jewels:
+        if c in hmap:
+            count += hmap[c]
 
     return count

@@ -4,7 +4,7 @@ Test file for Jewels and Stones Algorithm.
 
 import pytest
 
-from dsa_008_jewels_and_stones import jewels_and_stones
+from dsa_008_jewels_and_stones import jewels_and_stones_1, jewels_and_stones_2
 
 
 def load_test_cases(f: str) -> list[tuple[str, str, int]]:
@@ -30,8 +30,18 @@ def load_test_cases(f: str) -> list[tuple[str, str, int]]:
 @pytest.mark.parametrize(
     "jewels, stones, expected", load_test_cases("tests/test_008_jewels_and_stones.txt")
 )
-def test_jewels_and_stones(jewels: str, stones: str, expected: int) -> None:
+def test_jewels_and_stones_1(jewels: str, stones: str, expected: int) -> None:
     """
     Test for Solution.
     """
-    assert jewels_and_stones(jewels, stones) == expected
+    assert jewels_and_stones_1(jewels, stones) == expected
+
+
+@pytest.mark.parametrize(
+    "jewels, stones, expected", load_test_cases("tests/test_008_jewels_and_stones.txt")
+)
+def test_jewels_and_stones_2(jewels: str, stones: str, expected: int) -> None:
+    """
+    Test for Solution.
+    """
+    assert jewels_and_stones_2(jewels, stones) == expected
