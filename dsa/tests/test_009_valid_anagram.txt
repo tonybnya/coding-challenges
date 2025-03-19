@@ -1,0 +1,11 @@
+cat,tac=true
+listen,silent=true
+program,function=false
+a,a=true
+ab,ba=true
+abc,def=false
+racecar,carrace=true
+hello,helloo=false
+abcd,abc=false
+,=true
+test,ttes=true
