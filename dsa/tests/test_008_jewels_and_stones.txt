@@ -1,0 +1,7 @@
+abc,ac=2  
+Af,AaaddfFf=3  
+AYOPD,ayopd=0  
+xyz,xyzxyz=6  
+aA,aAAbbbb=3  
+ABC,abcABC=3  
+z,zzZZ=2  
