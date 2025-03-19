@@ -41,9 +41,9 @@ def jewels_and_stones_2(jewels: str, stones: str) -> int:
     """
     First Solution: One Hashmap
     Time Complexity: O(m + n)
-    Space Complexity: O()
+    Space Complexity: O(n)
     """
-    hmap: dict = {}  # SC: O(m)
+    hmap: dict = {}  # SC: O(n)
 
     for c in stones:
         hmap[c] = hmap.get(c, 0) + 1
