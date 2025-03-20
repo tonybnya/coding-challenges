@@ -1,0 +1,10 @@
+abcabd=2
+thedailybyte=1
+developer=0
+a=0
+aa=-1
+abcd=0
+aabbcc=-1
+racecar=3
+xxyz=2
+testcase=4
