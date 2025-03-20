@@ -4,7 +4,7 @@ Test file for Valid Anagram algorithm.
 
 import pytest
 
-from dsa_009_valid_anagram import valid_anagram_1, valid_anagram_2
+from dsa_009_valid_anagram import valid_anagram_1, valid_anagram_2, valid_anagram_3
 
 
 def load_test_cases(f: str) -> list[tuple[str, str, bool]]:
@@ -41,6 +41,16 @@ def test_valid_anagram_1(s: str, t: str, expected: bool) -> None:
 )
 def test_valid_anagram_2(s: str, t: str, expected: bool) -> None:
     """
-    Test for First Solution.
+    Test for Second Solution.
     """
     assert valid_anagram_2(s, t) == expected
+
+
+@pytest.mark.parametrize(
+    "s, t, expected", load_test_cases("tests/test_009_valid_anagram.txt")
+)
+def test_valid_anagram_3(s: str, t: str, expected: bool) -> None:
+    """
+    Test for Third Solution.
+    """
+    assert valid_anagram_3(s, t) == expected

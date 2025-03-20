@@ -39,7 +39,7 @@ def valid_anagram_1(s: str, t: str) -> bool:
 
 def valid_anagram_2(s: str, t: str) -> bool:
     """
-    First Solution:
+    Second Solution:
     Time Complexity: O(m + n)
     Space Complexity: O(m + n)
     """
@@ -50,3 +50,31 @@ def valid_anagram_2(s: str, t: str) -> bool:
         return False
 
     return set(s) == set(t)
+
+
+def valid_anagram_3(s: str, t: str) -> bool:
+    """
+    Third Solution:
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    """
+    m: int = len(s)
+    n: int = len(t)
+
+    if m != n:
+        return False
+
+    # at this stage, we know s and t have same lengths
+
+    # create an hmap of chars in t
+    hmap: dict = {}
+    for c in t:
+        hmap[c] = hmap.get(c, 0) + 1
+
+    # for each char in s, check if the char is in hmap
+    for c in s:
+        if c not in hmap or hmap[c] <= 0:
+            return False
+        hmap[c] -= 1
+
+    return True
