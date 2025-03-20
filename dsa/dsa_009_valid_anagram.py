@@ -39,7 +39,7 @@ def valid_anagram_1(s: str, t: str) -> bool:
 
 def valid_anagram_2(s: str, t: str) -> bool:
     """
-    Second Solution:
+    Second Solution: Two Hashsets
     Time Complexity: O(m + n)
     Space Complexity: O(m + n)
     """
@@ -54,7 +54,7 @@ def valid_anagram_2(s: str, t: str) -> bool:
 
 def valid_anagram_3(s: str, t: str) -> bool:
     """
-    Third Solution:
+    Third Solution: One Hashmap
     Time Complexity: O(n)
     Space Complexity: O(n)
     """
