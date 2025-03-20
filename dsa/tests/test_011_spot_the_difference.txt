@@ -1,0 +1,9 @@
+foobar,barfoot=t
+ide,idea=a
+coding,ingcod= 
+abcde,abcde= 
+xyz,xxyz=x
+hello,ohlleo=o
+test,tsetx=x
+a,a= 
+ , = 
