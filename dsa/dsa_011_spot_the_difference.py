@@ -16,11 +16,11 @@ s = "coding", t "ingcod", return ''
 """
 
 
-def spot_the_difference(s: str, t: str) -> str:
+def spot_the_difference_1(s: str, t: str) -> str:
     """
     Solution: Hashmap of s and t
-    Time Complexity: O(m + n)  # n is length of t
-    Space Complexity: O(m + n)  # m is length of s
+    Time Complexity: O(m + n)  # m is length of s and # n is length of t
+    Space Complexity: O(m + n)
     """
     hmap: dict = {}
 
@@ -33,5 +33,25 @@ def spot_the_difference(s: str, t: str) -> str:
     for k, v in hmap.items():
         if v % 2 != 0:
             return k
+
+    return ""
+
+
+def spot_the_difference_2(s: str, t: str) -> str:
+    """
+    Solution: Hashmap of s and t
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    """
+    hmap: dict = {}
+
+    for c in s:
+        hmap[c] = hmap.get(c, 0) + 1
+
+    for c in t:
+        if c not in hmap or hmap[c] == 0:
+            return c
+
+        hmap[c] = hmap.get(c, 0) - 1
 
     return ""
