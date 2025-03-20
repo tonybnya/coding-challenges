@@ -32,3 +32,23 @@ def first_unique_character_1(s: str) -> int:
             return i
 
     return -1
+
+
+def first_unique_character_2(s: str) -> int:
+    """
+    Second Solution: Hashmap
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    """
+    n: int = len(s)
+    hmap: dict = {}
+
+    for i in range(n):
+        c: str = s[i]
+        hmap[c] = hmap.get(c, 0) + 1
+
+    for i, c in enumerate(s):
+        if hmap[c] == 1:
+            return i
+
+    return -1
