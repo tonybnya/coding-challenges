@@ -4,7 +4,10 @@ Test file for Intersection of Numbers algorithm.
 
 import pytest
 
-from dsa_012_intersection_of_numbers import intersection_of_numbers
+from dsa_012_intersection_of_numbers import (
+    intersection_of_numbers_1,
+    intersection_of_numbers_2,
+)
 
 
 def load_test_cases(f: str) -> list[tuple[list[int], list[int], list[int]]]:
@@ -38,10 +41,23 @@ def load_test_cases(f: str) -> list[tuple[list[int], list[int], list[int]]]:
     "nums1, nums2, expected",
     load_test_cases("tests/test_012_intersection_of_numbers.txt"),
 )
-def test_intersection_of_numbers(
+def test_intersection_of_numbers_1(
     nums1: list[int], nums2: list[int], expected: list[int]
 ) -> None:
     """
-    Test for Solution.
+    Test for Naive Solution.
     """
-    assert intersection_of_numbers(nums1, nums2) == expected
+    assert intersection_of_numbers_1(nums1, nums2) == expected
+
+
+@pytest.mark.parametrize(
+    "nums1, nums2, expected",
+    load_test_cases("tests/test_012_intersection_of_numbers.txt"),
+)
+def test_intersection_of_numbers_2(
+    nums1: list[int], nums2: list[int], expected: list[int]
+) -> None:
+    """
+    Test for Better Solution.
+    """
+    assert intersection_of_numbers_2(nums1, nums2) == expected
