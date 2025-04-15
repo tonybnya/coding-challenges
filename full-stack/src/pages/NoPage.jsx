@@ -18,7 +18,7 @@ const NoPage = () => {
             src={logo}
             className="h-12 w-12 max-lg:w-10 max-lg:h-10 text-primary"
           />
-          <span className="text-4xl max-lg:text-lg font-bold text-primary tracking-tight">
+          <span className="text-4xl max-lg:text-lg font-bold text-[#602f32] tracking-tight">
             Coding Challenges
           </span>
         </div>
