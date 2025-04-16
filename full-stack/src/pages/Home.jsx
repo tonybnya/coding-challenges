@@ -4,7 +4,7 @@ import Spinner from "../components/Spinner";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-console.log("API_URL:", API_URL);
+console.log("VITE_API_URL:", API_URL);
 
 const Home = () => {
   const [challenges, setChallenges] = useState([]);
