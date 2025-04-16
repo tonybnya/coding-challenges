@@ -124,31 +124,6 @@ DATABASES = {
     }
 }
 
-# Determine the SQLite database path based on environment
-# if os.environ.get('DATABASE_URL') and 'sqlite:' in os.environ.get('DATABASE_URL'):
-#     # Extract the path from DATABASE_URL
-#     sqlite_path = os.environ.get('DATABASE_URL').replace('sqlite:///', '')
-#     # For Windows compatibility (if developing locally on Windows)
-#     if not sqlite_path.startswith('/') and not sqlite_path[1:3] == ':\\':
-#         sqlite_path = str(BASE_DIR / sqlite_path)
-# else:
-#     # Default local database path
-#     sqlite_path = str(BASE_DIR / 'db.sqlite3')
-#
-# DATABASES = {
-#     "default": dj_database_url.config(
-#         default=f"sqlite:///{sqlite_path}",
-#         conn_max_age=600,  # Persistent connection
-#     )
-# }
-
-# SQLite optimizations if using SQLite
-# if 'sqlite' in DATABASES['default']['ENGINE']:
-#     DATABASES['default']['OPTIONS'] = {
-#         'timeout': 20,  # in seconds
-#         'check_same_thread': False,
-#     }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
