@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("DJANGO_SECRET_KEY", default="unsafe-default-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 
@@ -117,37 +117,37 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-# Determine the SQLite database path based on environment
-if os.environ.get('DATABASE_URL') and 'sqlite:' in os.environ.get('DATABASE_URL'):
-    # Extract the path from DATABASE_URL
-    sqlite_path = os.environ.get('DATABASE_URL').replace('sqlite:///', '')
-    # For Windows compatibility (if developing locally on Windows)
-    if not sqlite_path.startswith('/') and not sqlite_path[1:3] == ':\\':
-        sqlite_path = str(BASE_DIR / sqlite_path)
-else:
-    # Default local database path
-    sqlite_path = str(BASE_DIR / 'db.sqlite3')
-
 DATABASES = {
-    "default": dj_database_url.config(
-        default=f"sqlite:///{sqlite_path}",
-        conn_max_age=600,  # Persistent connection
-    )
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
 }
 
+# Determine the SQLite database path based on environment
+# if os.environ.get('DATABASE_URL') and 'sqlite:' in os.environ.get('DATABASE_URL'):
+#     # Extract the path from DATABASE_URL
+#     sqlite_path = os.environ.get('DATABASE_URL').replace('sqlite:///', '')
+#     # For Windows compatibility (if developing locally on Windows)
+#     if not sqlite_path.startswith('/') and not sqlite_path[1:3] == ':\\':
+#         sqlite_path = str(BASE_DIR / sqlite_path)
+# else:
+#     # Default local database path
+#     sqlite_path = str(BASE_DIR / 'db.sqlite3')
+#
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=f"sqlite:///{sqlite_path}",
+#         conn_max_age=600,  # Persistent connection
+#     )
+# }
+
 # SQLite optimizations if using SQLite
-if 'sqlite' in DATABASES['default']['ENGINE']:
-    DATABASES['default']['OPTIONS'] = {
-        'timeout': 20,  # in seconds
-        'check_same_thread': False,
-    }
+# if 'sqlite' in DATABASES['default']['ENGINE']:
+#     DATABASES['default']['OPTIONS'] = {
+#         'timeout': 20,  # in seconds
+#         'check_same_thread': False,
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
