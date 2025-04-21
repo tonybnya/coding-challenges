@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const CardChallenge = ({ id, icon, title, description, src, tags = [] }) => {
   return (
-    <div className="max-w-sm p-4 bg-[#030710] rounded-lg shadow-sm">
+    <div className="max-w-sm p-4 bg-[#030710] rounded-md">
       <div className="flex items-center justify-between pb-4">
         <img
           src={icon}
