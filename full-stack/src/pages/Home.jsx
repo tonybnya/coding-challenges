@@ -17,7 +17,7 @@ const Home = () => {
       setError("");
 
       try {
-        const response = await fetch(`${API_URL}/challenges`, {
+        const response = await fetch(`${API_URL}/challenges/`, {
           method: "GET",
           headers: {
             Accept: "application/json",
@@ -38,6 +38,7 @@ const Home = () => {
         }
 
         setChallenges(data);
+        console.log(data);
       } catch (error) {
         console.error("Error:", error);
         setError(`Failed to fetch challenges: ${error.message}`);

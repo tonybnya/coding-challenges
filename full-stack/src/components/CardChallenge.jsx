@@ -1,6 +1,7 @@
 import { CheckCircle, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 const CardChallenge = ({
   id,
   icon,
@@ -10,11 +11,18 @@ const CardChallenge = ({
   live,
   tags = [],
 }) => {
+  // Create a URL for the icon, either using the API server for static paths or directly using the icon
+  const iconUrl = icon && icon.startsWith('/static') 
+    ? `${API_URL.replace('/api', '')}${icon}` 
+    : icon;
+
+  // Log original icon path and transformed URL for debugging
+  console.log(`Challenge "${title}" - Original icon: ${icon} => Transformed URL: ${iconUrl}`);
   return (
     <div className="max-w-sm p-4 bg-[#030710] rounded-md">
       <div className="flex items-center justify-between pb-4">
         <img
-          src={icon}
+          src={iconUrl}
           alt={`Icon for ${title}`}
           className="h-8 w-8 object-contain"
         />
