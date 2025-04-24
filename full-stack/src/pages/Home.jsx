@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import CardChallenge from "../components/CardChallenge";
 import Spinner from "../components/Spinner";
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || http://localhost:8000/api;
 
 console.log("VITE_API_URL:", API_URL);
 
