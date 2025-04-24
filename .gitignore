@@ -40,3 +40,5 @@ local_settings.py
 *.sln
 *.sw?
 ._*
+
+db.sqlite3
