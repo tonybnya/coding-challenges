@@ -18,7 +18,7 @@ def find_maximum(nums: list[int]) -> Optional[int]:
         return None
 
     # negative infinity
-    maximum = float("-inf")
+    maximum = float("-inf")  # or `-float("inf")`
     for num in nums:
         if num > maximum:
             maximum = num
