@@ -1,0 +1,16 @@
+John,Jane+Smith,Doe#John Smith=1
+Alice,Bob+Brown,White#Charlie Black=0
+Emily,Daniel+Taylor,Johnson#Daniel Taylor=1
+Olivia,Liam+Lee,Walker#Liam Lee=1
+Sophia,Noah+Hall,Allen#Sophia Allen=1
+Emma,Mason+Hill,Young#James Smith=0
+Ava,Ethan+King,Wright#Ava Wright=1
+Lucas,Isabella+Scott,Adams#Isabella Adams=1
+Logan,Mia+Turner,Martin#Logan Hill=0
+Chloe,Elijah+Moore,Baker#Chloe Moore=1
+Zoe,Oliver+Clark,Campbell#Zoe Clark=1
+Amelia,Benjamin+Rivera,Morgan#Benjamin Smith=0
+NULL,NULL+Johnson,NULL#Johnson NULL=0
+Ann-Marie,Smith+O'Neil,Jones#Ann-Marie O'Neil=1
+123,456+789,000#123 000=1
+NULL,Null+None,Null#Null Null=1
