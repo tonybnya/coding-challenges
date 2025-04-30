@@ -29,7 +29,7 @@ possible orders in which we could publish the posts.
 def num_possible_orders(num_posts: int) -> int:
     """
     Solution.
-    Time Complexity: O(1)
+    Time Complexity: O(num_posts)
     Space Complexity: O(1)
     """
     possibities: int = 1
