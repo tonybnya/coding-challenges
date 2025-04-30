@@ -1,0 +1,10 @@
+10,fitness,0=10
+10,fitness,1=40
+10,fitness,2=160
+10,cosmetic,0=10
+10,cosmetic,1=30
+10,cosmetic,2=90
+10,tech,0=10
+10,lifestyle,1=20
+10,travel,2=40
+3,book,4=48

@@ -1,0 +1,9 @@
+a ab abc abcd=abcd
+hello world python rocks=python
+same size word=same
+tiny hugeee big=hugeee
+onlyone=onlyone
+ a abc=abc
+ =  
+cat dog bat=cat
+hello world hi hey=hello
