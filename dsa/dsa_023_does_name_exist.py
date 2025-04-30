@@ -11,8 +11,8 @@ If the full name isn't found, it should return `False` instead.
 def does_name_exist(firstnames: list[str], lastnames: list[str], fullname: str) -> bool:
     """
     Solution.
-    Time Complexity: O()
-    Space Complexity: O()
+    Time Complexity: O(n^2)
+    Space Complexity: O(1)
     """
     for first in firstnames:
         for last in lastnames:
