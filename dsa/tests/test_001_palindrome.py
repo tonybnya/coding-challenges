@@ -11,7 +11,7 @@ def load_test_cases(filename: str) -> list[tuple[str, bool]]:
     """
     Function to load test cases from a text file.
     """
-    test_cases = []
+    test_cases: list[tuple[str, bool]] = []
 
     with open(filename, "r", encoding="utf-8") as file:
         for line in file:
