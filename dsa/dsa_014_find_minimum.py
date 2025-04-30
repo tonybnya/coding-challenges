@@ -17,6 +17,7 @@ def find_minimum(nums: list[int]) -> Optional[int]:
     if not nums:
         return None
 
+    # positive infinity
     minimum = float("inf")
     for num in nums:
         if num < minimum:
