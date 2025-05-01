@@ -108,20 +108,32 @@ def divide_and_conquer(left: list[int], right: list[int]) -> list[int]:
     return lst + left[i:] + right[j:]
 
 
-# def quick(arr: list[int]) -> None:
-#     """
-#     Quick Sort.
-#
-#     Picks a "pivot" element, partitions the list into elements
-#     less than and greater than the pivot, then sorts the parts recursively.
-#     How it works: Fast in practice due to efficient partitioning.
-#
-#     Time Complexity: O()
-#     Space Complexity: O()
-#     """
-#     pass
-#
-#
+def quick(arr: list[int]) -> list[int]:
+    """
+    Quick Sort.
+
+    Picks a "pivot" element, partitions the list into elements
+    less than and greater than the pivot, then sorts the parts recursively.
+    How it works: Fast in practice due to efficient partitioning.
+
+    Time Complexity: O(n^2)
+    Space Complexity: O(logn)
+    """
+    if len(arr) < 2:
+        return arr
+
+    pivot: int = arr[0]
+    less_than_pivot, greater_than_pivot = [], []
+
+    for num in arr[1:]:
+        if num <= pivot:
+            less_than_pivot.append(num)
+        else:
+            greater_than_pivot.append(num)
+
+    return quick(less_than_pivot) + [pivot] + quick(greater_than_pivot)
+
+
 # def selection(arr: list[int]) -> None:
 #     """
 #     Selection Sort.
