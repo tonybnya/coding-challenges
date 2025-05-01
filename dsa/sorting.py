@@ -41,18 +41,24 @@ def bubble(arr: list[int]) -> list[int]:
     # return arr
 
 
-# def insertion(arr: list[int]) -> None:
-#     """
-#     Insertion Sort.
-#
-#     Builds the final sorted list one item at a time by inserting
-#     each new element into its correct position.
-#     How it works: Like sorting playing cards in your hand.
-#
-#     Time Complexity: O()
-#     Space Complexity: O()
-#     """
-#     pass
+def insertion(arr: list[int]) -> list[int]:
+    """
+    Insertion Sort.
+
+    Builds the final sorted list one item at a time by inserting
+    each new element into its correct position.
+    How it works: Like sorting playing cards in your hand.
+
+    Time Complexity: O(n^2)
+    Space Complexity: O(1)
+    """
+    for i in range(len(arr)):
+        j: int = i
+        while j > 0 and arr[j - 1] > arr[j]:
+            arr[j], arr[j - 1] = arr[j - 1], arr[j]
+            j -= 1
+
+    return arr
 
 
 def merge(arr: list[int]) -> list[int]:

@@ -4,7 +4,7 @@ Test file.
 
 import pytest
 
-from sorting import bubble, merge
+from sorting import bubble, insertion, merge
 
 
 def load_test_cases(filepath: str) -> list[tuple[list[int], list[int]]]:
@@ -39,15 +39,15 @@ def test_bubble(arr: list[int], expected: list[int]) -> None:
     assert bubble(arr) == expected
 
 
-# @pytest.mark.parametrize(
-#     "arr, expected",
-#     load_test_cases("./tests/test_sorting.txt"),
-# )
-# def test_insertion(arr: list[int], expected: list[int]) -> None:
-#     """
-#     Tests for Insertion Sort.
-#     """
-#     assert insertion(arr) == expected
+@pytest.mark.parametrize(
+    "arr, expected",
+    load_test_cases("./tests/test_sorting.txt"),
+)
+def test_insertion(arr: list[int], expected: list[int]) -> None:
+    """
+    Tests for Insertion Sort.
+    """
+    assert insertion(arr) == expected
 
 
 @pytest.mark.parametrize(
