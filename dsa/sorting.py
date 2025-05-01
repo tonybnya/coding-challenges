@@ -116,7 +116,7 @@ def quick(arr: list[int]) -> list[int]:
     less than and greater than the pivot, then sorts the parts recursively.
     How it works: Fast in practice due to efficient partitioning.
 
-    Time Complexity: O(n^2)
+    Time Complexity: O(nlogn)
     Space Complexity: O(logn)
     """
     if len(arr) < 2:
@@ -134,16 +134,25 @@ def quick(arr: list[int]) -> list[int]:
     return quick(less_than_pivot) + [pivot] + quick(greater_than_pivot)
 
 
-# def selection(arr: list[int]) -> None:
-#     """
-#     Selection Sort.
-#
-#     Repeatedly finds the smallest (or largest) element and moves it to
-#     the beginning of the list.
-#     How it works: Selects the right element and places it in the correct
-#     position each time.
-#
-#     Time Complexity: O()
-#     Space Complexity: O()
-#     """
-#     pass
+def selection(arr: list[int]) -> list[int]:
+    """
+    Selection Sort.
+
+    Repeatedly finds the smallest (or largest) element and moves it to
+    the beginning of the list.
+    How it works: Selects the right element and places it in the correct
+    position each time.
+
+    Time Complexity: O(n^2)
+    Space Complexity: O(1)
+    """
+    n = len(arr)
+
+    for i in range(n):
+        min_index = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+
+    return arr

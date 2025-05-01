@@ -4,7 +4,7 @@ Test file.
 
 import pytest
 
-from sorting import bubble, insertion, merge, quick
+from sorting import bubble, insertion, merge, quick, selection
 
 
 def load_test_cases(filepath: str) -> list[tuple[list[int], list[int]]]:
@@ -72,12 +72,12 @@ def test_quick(arr: list[int], expected: list[int]) -> None:
     assert quick(arr) == expected
 
 
-# @pytest.mark.parametrize(
-#     "arr, expected",
-#     load_test_cases("./tests/test_sorting.txt"),
-# )
-# def test_selection(arr: list[int], expected: list[int]) -> None:
-#     """
-#     Tests for Selection Sort.
-#     """
-#     assert selection(arr) == expected
+@pytest.mark.parametrize(
+    "arr, expected",
+    load_test_cases("./tests/test_sorting.txt"),
+)
+def test_selection(arr: list[int], expected: list[int]) -> None:
+    """
+    Tests for Selection Sort.
+    """
+    assert selection(arr) == expected
