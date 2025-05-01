@@ -4,7 +4,7 @@ Test file.
 
 import pytest
 
-from factorial import factorial_1
+from factorial import factorial_1, factorial_2
 
 
 def load_test_cases(filepath: str) -> list[tuple[int, int]]:
@@ -34,6 +34,17 @@ def load_test_cases(filepath: str) -> list[tuple[int, int]]:
 )
 def test_factorial_1(num: int, expected: int) -> None:
     """
-    Tests for Factorial.
+    Tests for Recursive solution.
     """
     assert factorial_1(num) == expected
+
+
+@pytest.mark.parametrize(
+    "num, expected",
+    load_test_cases("./tests/test_factorial.txt"),
+)
+def test_factorial_2(num: int, expected: int) -> None:
+    """
+    Tests for Iterative solution.
+    """
+    assert factorial_2(num) == expected
