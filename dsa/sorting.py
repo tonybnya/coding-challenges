@@ -55,51 +55,51 @@ def bubble(arr: list[int]) -> list[int]:
 #     pass
 
 
-# def merge(arr: list[int]) -> list[int]:
-#     """
-#     Recursively divides the list into two halves
-#     and merge with the `divide_and_conquer` function.
-#
-#     Time Complexity: O(nlogn)
-#     Space Complexity: O(n)
-#     """
-#     if len(arr) < 2:
-#         return arr
-#
-#     middle: int = len(arr) // 2
-#     # left: list[int] = arr[:middle]
-#     # right: list[int] = arr[middle:]
-#     #
-#     # return divide_and_conquer(merge(left), merge(right))
-#     left: list[int] = merge(arr[:middle])
-#     right: list[int] = merge(arr[middle:])
-#
-#     return divide_and_conquer(left, right)
-#
-#
-# def divide_and_conquer(left: list[int], right: list[int]) -> list[int]:
-#     """
-#     Merge Sort.
-#
-#     Divides the list into halves, recursively sorts each half,
-#     then merges the sorted halves together.
-#     How it works: Divide-and-conquer strategy.
-#
-#     Time Complexity: O(n)
-#     Space Complexity: O(n)
-#     """
-#     lst: list[int] = []
-#     i, j = 0, 0
-#
-#     while i < len(left) and j < len(right):
-#         if left[i] < right[j]:
-#             lst.append(left[i])
-#             i += 1
-#         else:
-#             lst.append(right[j])
-#             j += 1
-#
-#     return lst + left[i:] + right[j:]
+def merge(arr: list[int]) -> list[int]:
+    """
+    Recursively divides the list into two halves
+    and merge with the `divide_and_conquer` function.
+
+    Time Complexity: O(nlogn)
+    Space Complexity: O(n)
+    """
+    if len(arr) < 2:
+        return arr
+
+    middle: int = len(arr) // 2
+    # left: list[int] = arr[:middle]
+    # right: list[int] = arr[middle:]
+    #
+    # return divide_and_conquer(merge(left), merge(right))
+    left: list[int] = merge(arr[:middle])
+    right: list[int] = merge(arr[middle:])
+
+    return divide_and_conquer(left, right)
+
+
+def divide_and_conquer(left: list[int], right: list[int]) -> list[int]:
+    """
+    Merge Sort.
+
+    Divides the list into halves, recursively sorts each half,
+    then merges the sorted halves together.
+    How it works: Divide-and-conquer strategy.
+
+    Time Complexity: O(n)
+    Space Complexity: O(n)
+    """
+    lst: list[int] = []
+    i, j = 0, 0
+
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            lst.append(left[i])
+            i += 1
+        else:
+            lst.append(right[j])
+            j += 1
+
+    return lst + left[i:] + right[j:]
 
 
 # def quick(arr: list[int]) -> None:
