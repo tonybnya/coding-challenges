@@ -6,8 +6,8 @@ Fibonacci.
 def fibonacci_1(num: int) -> int:
     """
     Recursive Solution.
-    Time Complexity: O()
-    Space Complexity: O()
+    Time Complexity: O(2^n)
+    Space Complexity: O(n)
     """
     if num < 0:
         return -1
@@ -21,8 +21,8 @@ def fibonacci_1(num: int) -> int:
 def fibonacci_2(num: int, cache={}) -> int:
     """
     Memoization Solution.
-    Time Complexity: O()
-    Space Complexity: O()
+    Time Complexity: O(n)
+    Space Complexity: O(n)
     """
     if num < 0:
         return -1
