@@ -6,8 +6,8 @@ Logarithm.
 def log2(num: int) -> int:
     """
     Solution.
-    Time Complexity: O()
-    Space Complexity: O()
+    Time Complexity: O(lognum)
+    Space Complexity: O(1)
     """
     if num <= 0:
         return -1
