@@ -4,7 +4,7 @@ Test file.
 
 import pytest
 
-from fibonacci import fibonacci_2
+from fibonacci import fibonacci_2, fibonacci_3
 
 
 def load_test_cases(filepath: str) -> list[tuple[int, int]]:
@@ -48,3 +48,14 @@ def test_fibonacci_2(num: int, expected: int) -> None:
     Tests for solution with memoization.
     """
     assert fibonacci_2(num) == expected
+
+
+@pytest.mark.parametrize(
+    "num, expected",
+    load_test_cases("./tests/test_fibonacci.txt"),
+)
+def test_fibonacci_3(num: int, expected: int) -> None:
+    """
+    Tests for solution with memoization.
+    """
+    assert fibonacci_3(num) == expected
