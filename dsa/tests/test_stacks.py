@@ -51,8 +51,7 @@ def test_stack_pop_empty():
     Test for pop() empty Stack.
     """
     stack = Stack()
-    with pytest.raises(IndexError):
-        stack.pop()
+    assert stack.pop() is None
 
 
 def test_stack_peek_empty():
@@ -60,5 +59,4 @@ def test_stack_peek_empty():
     Test for peek() empty Stack.
     """
     stack = Stack()
-    with pytest.raises(IndexError):
-        stack.peek()
+    assert stack.peek() is None
