@@ -2,6 +2,8 @@
 Implementation of a Stack.
 """
 
+from typing import Optional
+
 
 class Stack:
     """
@@ -29,22 +31,22 @@ class Stack:
         """
         self.items.append(item)
 
-    def pop(self) -> int:
+    def pop(self) -> Optional[int]:
         """
         Remove and return the top item of the Stack.
         Time Complexity: O(1)
         """
         if self.is_empty():
-            raise IndexError("Pop from an empty stack.")
+            return None
         return self.items.pop()
 
-    def peek(self) -> int:
+    def peek(self) -> Optional[int]:
         """
         Return the top item without removing it from the Stack.
         Time Complexity: O(1)
         """
         if self.is_empty():
-            raise IndexError("Peek from an empty stack.")
+            return None
         return self.items[-1]
 
     def size(self) -> int:
