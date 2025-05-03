@@ -7,7 +7,7 @@ from queues import Queue
 
 def test_queue_initial_state():
     """
-    Test for init queue.
+    Test for initial state of a Queue.
     """
     queue = Queue()
     assert queue.is_empty() is True

@@ -2,14 +2,12 @@
 Test file.
 """
 
-import pytest
-
 from stacks import Stack
 
 
 def test_stack_initial_state():
     """
-    Test for init Stack.
+    Test for initial state of a Stack.
     """
     stack = Stack()
     assert stack.is_empty() is True
