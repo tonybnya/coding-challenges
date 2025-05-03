@@ -31,7 +31,7 @@ class Stack:
         """
         self.items.append(item)
 
-    def pop(self) -> int | None:
+    def pop(self) -> int | str | None:
         """
         Remove and return the top item of the Stack.
         Time Complexity: O(1)
@@ -40,7 +40,7 @@ class Stack:
             return None
         return self.items.pop()
 
-    def peek(self) -> int | None:
+    def peek(self) -> int | str | None:
         """
         Return the top item without removing it from the Stack.
         Time Complexity: O(1)
