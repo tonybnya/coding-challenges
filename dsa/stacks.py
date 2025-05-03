@@ -24,14 +24,14 @@ class Stack:
         """
         return len(self.items) == 0
 
-    def push(self, item: int) -> None:
+    def push(self, item: int | str) -> None:
         """
         Push an item to the Stack.
         Time Complexity: O(1)
         """
         self.items.append(item)
 
-    def pop(self) -> Optional[int]:
+    def pop(self) -> int | None:
         """
         Remove and return the top item of the Stack.
         Time Complexity: O(1)
@@ -40,7 +40,7 @@ class Stack:
             return None
         return self.items.pop()
 
-    def peek(self) -> Optional[int]:
+    def peek(self) -> int | None:
         """
         Return the top item without removing it from the Stack.
         Time Complexity: O(1)
