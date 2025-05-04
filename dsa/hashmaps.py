@@ -10,6 +10,9 @@ class HashMap:
     Class definition of a HashMap.
     """
 
+    # TODO: handle collision
+    # TODO: delete method
+
     def __init__(self, size: int) -> None:
         """
         Initialize the list to store the values.
@@ -49,6 +52,12 @@ class HashMap:
         if tup is None:
             raise Exception("sorry, key not found")
         return tup[1]
+
+    def delete(self, key) -> Any:
+        """
+        Delete a value in the hashmap
+        """
+        pass
 
     def __repr__(self):
         """
